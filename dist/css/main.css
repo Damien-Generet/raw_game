@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header h1 {
+  color: rgb(158, 0, 0);
+  font-weight: 700;
+}
+header form {
+  border: 1px solid white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+header form .search-bar {
+  background: none;
+  border: none;
+  color: white;
+}
+header form .search-bar:focus {
+  outline: none;
+}
+header form .lens-search {
+  fill: white;
+  margin-left: 10px;
+}
+
+.platform {
+  background-color: rgb(158, 0, 0);
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.platform-container {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.show-more__btn {
+  width: 200px;
+  padding: 15px;
+  color: white;
+  font-weight: 700;
+  background-color: rgb(158, 0, 0);
+  display: block;
+  margin: auto;
+  border-radius: 15px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+footer .decorative-border__footer {
+  display: block;
+  width: 200px;
+  height: 10px;
+  background-color: rgb(158, 0, 0);
+  margin-bottom: 10px;
+}/*# sourceMappingURL=main.css.map */
