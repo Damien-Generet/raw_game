@@ -66,6 +66,13 @@ header{
     display: block;
     margin: auto;
     border-radius: 15px;
+    border: none;
+    transition: 0.2s;
+
+    &:active {
+        scale: 0.95;
+        transition: 0.2s;
+    }
 }
 
 footer{

@@ -9,7 +9,7 @@ const isProduction = process.env.NODE_ENV == 'production';
 
 
 const stylesHandler = MiniCssExtractPlugin.loader;
-
+const DotenvWebpackPlugin = require('dotenv-webpack');
 
 
 const config = {
@@ -27,6 +27,7 @@ const config = {
         }),
 
         new MiniCssExtractPlugin(),
+        new DotenvWebpackPlugin(),
 
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
@@ -59,7 +60,6 @@ const config = {
 module.exports = () => {
     if (isProduction) {
         config.mode = 'production';
-        
         
         config.plugins.push(new WorkboxWebpackPlugin.GenerateSW());
         
