@@ -2,7 +2,8 @@ import { routes } from './routes'
 
 const apiRawg = process.env.API_KEY;
 console.log("Hello World!");
-
+const searchBar = document.getElementById("searchBar");
+const research = document.getElementById("research");
 
 const callRoute = () => {
     const { hash } = window.location;
@@ -20,3 +21,7 @@ const callRoute = () => {
   
   window.addEventListener('hashchange', () => callRoute());
   window.addEventListener('DOMContentLoaded', () => callRoute());
+  searchBar.addEventListener('submit', function(){
+    console.log(searchBar.value)
+      window.location.assign(`${window.location}` + "/" + `${research.value}`)
+  })

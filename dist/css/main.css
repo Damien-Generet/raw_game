@@ -31,8 +31,9 @@ header form .search-bar:focus {
   outline: none;
 }
 header form .lens-search {
-  fill: white;
+  color: white;
   margin-left: 10px;
+  width: 13px;
 }
 
 .platform {
@@ -75,4 +76,43 @@ footer .decorative-border__footer {
   height: 10px;
   background-color: rgb(158, 0, 0);
   margin-bottom: 10px;
+}
+
+.toggle-display {
+  display: none;
+}
+
+.cardGame {
+  position: relative;
+}
+.cardGame .hover-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(90, 0, 0, 0.87);
+  color: white;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.cardGame:hover .default-view {
+  transition: 0.5s;
+}
+.cardGame:hover .hover-view {
+  display: block;
+  transition: 0.5s;
+  opacity: 1;
+}
+.cardGame .card {
+  width: 400px;
+  height: 400px;
+}
+.cardGame .card .default-view .card-img-top {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
