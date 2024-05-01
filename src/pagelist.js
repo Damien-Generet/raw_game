@@ -49,7 +49,8 @@ const PageList = (argument = '') => {
                   <p>Date de sortie: ${article.released}</p>
                   <p>Éditeur: ${publisher ? publisher.name : 'Inconnu'}</p>
                   <p>Genre(s): ${genreNames.join(', ')}</p>
-                  <p>Note: ${article.rating}/10 (${article.ratings_count} votes)</p>
+                  <p>Note: ${article.rating}/5 (${article.ratings_count} votes)</p>
+                  <a href="#pagedetail/${article.id}">More info...</a>
                 </div>   
               </div>
             </div>

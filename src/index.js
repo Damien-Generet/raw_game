@@ -23,5 +23,7 @@ const callRoute = () => {
   window.addEventListener('DOMContentLoaded', () => callRoute());
   searchBar.addEventListener('submit', function(){
     console.log(searchBar.value)
-      window.location.assign(`${window.location}` + "/" + `${research.value}`)
+      const homeUrl = "index.html#pagelist"
+      history.replaceState(null, '', homeUrl)
+      window.location.assign(`${window.location}` + "/" + `${research.value}`);
   })
