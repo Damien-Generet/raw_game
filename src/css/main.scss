@@ -36,11 +36,6 @@ header{
             }
         }
 
-        & .lens-search{
-            color: white;
-            margin-left: 10px;
-            width: 13px;
-        }
     }
 }
 
@@ -107,6 +102,8 @@ footer{
         color: white;
         box-sizing: border-box;
         transition: 0.5s;
+        border-radius: 5px;
+
     }
     &:hover {
         .default-view {
@@ -123,6 +120,7 @@ footer{
     & .card{
         width: 400px;
         height: 400px;
+        background-color: rgba(255, 235, 205, 0);
 
         & .default-view .card-img-top{
             width: 100%;
@@ -132,4 +130,12 @@ footer{
             overflow: hidden;
         }
     }
+
+    & .card-body .card-title{
+        color: white;
+    }
+}
+
+#detail_img{
+    width: 100%;
 }

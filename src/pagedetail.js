@@ -20,7 +20,7 @@ const PageDetail = (argument) => {
         articleDOM.querySelector("p.publisher_detail").innerHTML = publishers.map(publisher => publisher.name).join(', ')
         articleDOM.querySelector("p.genres_detail").innerHTML = genres.map(genre => genre.name).join(', ')
         articleDOM.querySelector("p.tags_detail").innerHTML = tags.map(tag => tag.name).join(', ');
-        articleDOM.querySelector("source.trailer").setAttribute("src", `${trailers.results[0].data.max}`)
+        articleDOM.querySelector("video.trailer").setAttribute("src", `${trailers.results[0].data.max}`)
         stores.forEach(store_detail => {
           const liStore = document.createElement("li")
           liStore.innerHTML = store_detail.store.name;  
@@ -70,8 +70,7 @@ const PageDetail = (argument) => {
               </ul>
             </div>
             <h3>TRAILER</h3>
-            <video controls width="250">
-              <source type="video/mp4" class="trailer" />
+            <video controls width="720" class="trailer">
             </video>
 
           </div>
@@ -93,3 +92,7 @@ const PageDetail = (argument) => {
   // https://api.rawg.io/docs/#operation/games_movies_read
   //https://api.rawg.io/api/games/{id}/suggested
   // https://api.rawg.io/docs/#operation/games_stores_list
+
+
+  // <source type="video/mp4" class="trailer" src="https://steamcdn-a.akamaihd.net/steam/apps/256693661/movie_max.mp4"></source>
+  // <source type="video/mp4" class="trailer" src="https://steamcdn-a.akamaihd.net/steam/apps/256693661/movie_max.mp4"></source>

@@ -30,11 +30,6 @@ header form .search-bar {
 header form .search-bar:focus {
   outline: none;
 }
-header form .lens-search {
-  color: white;
-  margin-left: 10px;
-  width: 13px;
-}
 
 .platform {
   background-color: rgb(158, 0, 0);
@@ -96,6 +91,7 @@ footer .decorative-border__footer {
   color: white;
   box-sizing: border-box;
   transition: 0.5s;
+  border-radius: 5px;
 }
 .cardGame:hover .default-view {
   transition: 0.5s;
@@ -108,6 +104,7 @@ footer .decorative-border__footer {
 .cardGame .card {
   width: 400px;
   height: 400px;
+  background-color: rgba(255, 235, 205, 0);
 }
 .cardGame .card .default-view .card-img-top {
   width: 100%;
@@ -115,4 +112,11 @@ footer .decorative-border__footer {
   background-position: center;
   background-size: cover;
   overflow: hidden;
+}
+.cardGame .card-body .card-title {
+  color: white;
+}
+
+#detail_img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

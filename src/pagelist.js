@@ -31,6 +31,17 @@ const PageList = (argument = '') => {
         }
           const publisher = findPublisher(article);
           console.log(publisher)
+          const svgHash = {
+            "pc": "windows.svg",
+            "playstation": "ps4.svg",
+            "xbox": "xbox.svg",
+            "linux": "linux.svg",
+            "nintendo": "switch.svg",
+            "mobile": "mobile.svg",
+            "mac": "windows.svg",
+            "android": "mobile.svg",
+            "web": "windows.svg"
+          }
           // const publisher = publisherLoop(article);
           return `
           <div class="col cardGame">
@@ -40,9 +51,9 @@ const PageList = (argument = '') => {
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">${article.name}</h5>
-                    <icon></icon>
+                    ${article.parent_platforms.map(platform => `<img class="cardGame__platforms__logo" src="./img/${svgHash[platform.platform.slug]}" alt="">`).join(' ')}
                 </div>
-              </div> 
+              </div>
               <div class="hover-view">
                 <div class="card-body">
                   <h5 class="card-title">${article.name}</h5>
@@ -54,7 +65,8 @@ const PageList = (argument = '') => {
                 </div>   
               </div>
             </div>
-          </div>`;
+          </div>
+          `;
         };
 
         const addNewResult = (article) => {
